@@ -1,7 +1,7 @@
 .topbarContainer {
   height: 50px;
   width: 100%;
-  background-color: #1877f2;
+  background-color: #0f4c75;
   display: flex;
   align-items: center;
   position: sticky;
@@ -13,11 +13,11 @@
   flex: 3;
 }
 
-.logo {
+.topbartitle {
   font-size: 24px;
   margin-left: 20px;
   font-weight: bold;
-  color: white;
+  color: #bbe1fa;
   cursor: pointer;
 }
 
@@ -28,7 +28,7 @@
 .searchbar {
   width: 100%;
   height: 30px;
-  background-color: white;
+  background-color: #bbe1fa;
   border-radius: 30px;
   display: flex;
   align-items: center;
@@ -36,10 +36,13 @@
 
 .searchIcon {
   font-size: 20px !important;
+  color: #3282b8;
   margin-left: 10px;
 }
 
 .searchInput {
+  color: #3282b8;
+  background: inherit;
   border: none;
   width: 70%;
 }
@@ -53,7 +56,7 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
-  color: white;
+  color: #bbe1fa;
 }
 
 .topbarLink {
@@ -64,6 +67,7 @@
 
 .topbarIcons {
   display: flex;
+  align-items: center;
 }
 
 .topbarIconItem {
@@ -75,9 +79,9 @@
 .topbarIconBadge {
   width: 15px;
   height: 15px;
-  background-color: red;
+  background-color: #3282b8;
   border-radius: 50%;
-  color: white;
+  color: #bbe1fa;
   position: absolute;
   top: -5px;
   right: -5px;
@@ -95,8 +99,8 @@
   cursor: pointer;
 }
 
-@media screen and (max-width: 768px)  {
-  .topbarLink{
+@media screen and (max-width: 768px) {
+  .topbarLink {
     display: none;
   }
 }
