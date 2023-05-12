@@ -1,0 +1,7 @@
+api/node_modules
+client/node_modules
+socket/node_modules
+api/.env
+client/.env
+socket/.env
+```
