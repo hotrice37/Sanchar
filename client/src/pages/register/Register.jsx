@@ -62,7 +62,7 @@ export default function Register() {
               minLength="6"
             />
             <input
-              placeholder="Password Again"
+              placeholder="Confirm Password"
               required
               ref={passwordAgain}
               className="loginInput"
@@ -71,6 +71,7 @@ export default function Register() {
             <button className="loginButton" type="submit">
               Sign Up
             </button>
+            <hr className="line" />
             <Link className="loginRegisterButton" to="/login">
               Already have an account? Login
             </Link>

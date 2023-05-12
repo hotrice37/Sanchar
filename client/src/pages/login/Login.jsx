@@ -1,8 +1,9 @@
-import { useContext, useRef } from "react";
-import "./login.css";
-import { loginCall } from "../../apiCalls";
-import { AuthContext } from "../../context/AuthContext";
-import { CircularProgress } from "@material-ui/core";
+import { useContext, useRef } from 'react';
+import './login.css';
+import { loginCall } from '../../apiCalls';
+import { AuthContext } from '../../context/AuthContext';
+import { CircularProgress } from '@material-ui/core';
+import { Link } from 'react-router-dom';
 
 export default function Login() {
   const email = useRef();
@@ -21,12 +22,11 @@ export default function Login() {
     <div className="login">
       <div className="loginWrapper">
         <div className="loginLeft">
-          <h3 className="loginLogo">Lamasocial</h3>
-          <span className="loginDesc">
-            Connect with friends and the world around you on Lamasocial.
-          </span>
+          <h3 className="loginLogo">S</h3>
+          <span className="loginDesc">SANCHAR</span>
         </div>
         <div className="loginRight">
+          <div className="logintext">Log In</div>
           <form className="loginBox" onSubmit={handleClick}>
             <input
               placeholder="Email"
@@ -47,17 +47,18 @@ export default function Login() {
               {isFetching ? (
                 <CircularProgress color="white" size="20px" />
               ) : (
-                "Log In"
+                'Log In'
               )}
             </button>
+            <hr className="line" />
             <span className="loginForgot">Forgot Password?</span>
-            <button className="loginRegisterButton">
+            <Link className="loginRegisterButton" to="/">
               {isFetching ? (
                 <CircularProgress color="white" size="20px" />
               ) : (
-                "Create a New Account"
+                "Don't have an account? Sign Up"
               )}
-            </button>
+            </Link>
           </form>
         </div>
       </div>
