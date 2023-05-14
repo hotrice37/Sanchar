@@ -18,9 +18,9 @@ import CloseFriend from '../closeFriend/CloseFriend';
 export default function Sidebar() {
   return (
     <div className="sidebar">
-      <div className="sidebarWrapper">
+      {/* <div className="sidebarWrapper">
         <ul className="sidebarList">
-          <li className="sidebarListItem">
+          {/* <li className="sidebarListItem">
             <RssFeed className="sidebarIcon" />
             <span className="sidebarListItemText">Feed</span>
           </li>
@@ -35,8 +35,8 @@ export default function Sidebar() {
           <li className="sidebarListItem">
             <Person className="sidebarIcon" />
             <span className="sidebarListItemText">Profile</span>
-          </li>
-          {/* <li className="sidebarListItem">
+          </li> */}
+      {/* <li className="sidebarListItem">
             <PlayCircleFilledOutlined className="sidebarIcon" />
             <span className="sidebarListItemText">Videos</span>
           </li>
@@ -64,15 +64,15 @@ export default function Sidebar() {
             <School className="sidebarIcon" />
             <span className="sidebarListItemText">Courses</span>
           </li> */}
-        </ul>
-        {/* <button className="sidebarButton">Show More</button> */}
-        {/* <hr className="sidebarHr" />
+      {/* </ul> */}
+      {/* <button className="sidebarButton">Show More</button> */}
+      {/* <hr className="sidebarHr" />
         <ul className="sidebarFriendList">
           {Users.map((u) => (
             <CloseFriend key={u.id} user={u} />
           ))}
         </ul> */}
-      </div>
+      {/* // </div> */}
     </div>
   );
 }
