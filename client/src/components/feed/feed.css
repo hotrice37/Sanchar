@@ -1,7 +1,12 @@
-.feed{
-    flex:5.5
+.feed {
+  flex: 5.5;
 }
 
-.feedWrapper{
-    padding: 20px;
+.feedWrapper {
+  padding: 20px;
+}
+
+.postWrapper {
+  background-color: #0f4c75;
+  border-radius: 10px;
 }

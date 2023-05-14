@@ -1,14 +1,15 @@
-import "./share.css";
+import './share.css';
 import {
   PermMedia,
   Label,
   Room,
   EmojiEmotions,
   Cancel,
-} from "@material-ui/icons";
-import { useContext, useRef, useState } from "react";
-import { AuthContext } from "../../context/AuthContext";
-import axios from "axios";
+  AccountCircle,
+} from '@material-ui/icons';
+import { useContext, useRef, useState } from 'react';
+import { AuthContext } from '../../context/AuthContext';
+import axios from 'axios';
 
 export default function Share() {
   const { user } = useContext(AuthContext);
@@ -25,16 +26,16 @@ export default function Share() {
     if (file) {
       const data = new FormData();
       const fileName = Date.now() + file.name;
-      data.append("name", fileName);
-      data.append("file", file);
+      data.append('name', fileName);
+      data.append('file', file);
       newPost.img = fileName;
       console.log(newPost);
       try {
-        await axios.post("/upload", data);
+        await axios.post('/upload', data);
       } catch (err) {}
     }
     try {
-      await axios.post("/posts", newPost);
+      await axios.post('/posts', newPost);
       window.location.reload();
     } catch (err) {}
   };
@@ -43,17 +44,26 @@ export default function Share() {
     <div className="share">
       <div className="shareWrapper">
         <div className="shareTop">
-          <img
+          {user.profilePicture ? (
+            <img
+              className="shareProfileImg"
+              src={PF + 'person/noAvatar.png'}
+              alt=""
+            />
+          ) : (
+            <AccountCircle className="shareProfileImg" />
+          )}
+          {/* <img
             className="shareProfileImg"
             src={
               user.profilePicture
                 ? PF + user.profilePicture
-                : PF + "person/noAvatar.png"
+                : PF + 'person/noAvatar.png'
             }
             alt=""
-          />
+          /> */}
           <input
-            placeholder={"What's in your mind " + user.username + "?"}
+            placeholder={"What's in your mind " + user.username + '?'}
             className="shareInput"
             ref={desc}
           />
@@ -71,7 +81,7 @@ export default function Share() {
               <PermMedia htmlColor="tomato" className="shareIcon" />
               <span className="shareOptionText">Photo or Video</span>
               <input
-                style={{ display: "none" }}
+                style={{ display: 'none' }}
                 type="file"
                 id="file"
                 accept=".png,.jpeg,.jpg"

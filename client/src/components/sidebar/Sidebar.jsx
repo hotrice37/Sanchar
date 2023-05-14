@@ -1,4 +1,4 @@
-import "./sidebar.css";
+import './sidebar.css';
 import {
   RssFeed,
   Chat,
@@ -9,9 +9,11 @@ import {
   WorkOutline,
   Event,
   School,
-} from "@material-ui/icons";
-import { Users } from "../../dummyData";
-import CloseFriend from "../closeFriend/CloseFriend";
+  Notifications,
+  Person,
+} from '@material-ui/icons';
+import { Users } from '../../dummyData';
+import CloseFriend from '../closeFriend/CloseFriend';
 
 export default function Sidebar() {
   return (
@@ -27,6 +29,14 @@ export default function Sidebar() {
             <span className="sidebarListItemText">Chats</span>
           </li>
           <li className="sidebarListItem">
+            <Notifications className="sidebarIcon" />
+            <span className="sidebarListItemText">Notifications</span>
+          </li>
+          <li className="sidebarListItem">
+            <Person className="sidebarIcon" />
+            <span className="sidebarListItemText">Profile</span>
+          </li>
+          {/* <li className="sidebarListItem">
             <PlayCircleFilledOutlined className="sidebarIcon" />
             <span className="sidebarListItemText">Videos</span>
           </li>
@@ -53,15 +63,15 @@ export default function Sidebar() {
           <li className="sidebarListItem">
             <School className="sidebarIcon" />
             <span className="sidebarListItemText">Courses</span>
-          </li>
+          </li> */}
         </ul>
-        <button className="sidebarButton">Show More</button>
-        <hr className="sidebarHr" />
+        {/* <button className="sidebarButton">Show More</button> */}
+        {/* <hr className="sidebarHr" />
         <ul className="sidebarFriendList">
           {Users.map((u) => (
             <CloseFriend key={u.id} user={u} />
           ))}
-        </ul>
+        </ul> */}
       </div>
     </div>
   );
